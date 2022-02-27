@@ -138,13 +138,13 @@
         position: fixed;
         display: block;
         top: 0;
-        left: 0;
+        right: 0;
         bottom: 0;
         width: 300px;
         max-width: 100%;
         background-color: green;
         text-align: right; 
-        transform: translateX(107%);
+        transform: translateX(100%);
         transition: transform linear 0.2s;
     }
     .mobile-menu{
@@ -157,5 +157,5 @@
     }
     
     .nav-input:checked ~ .nav__overlay{display: block;animation: fadeIn linear 0.2s;}
-    .nav-input:checked ~ .header_menu-mobile{transform: translateX(7%);}
+    .nav-input:checked ~ .header_menu-mobile{transform: translateX(0);}
 }

@@ -1,0 +1,161 @@
+:root{
+    --background-color: darkred;
+    --font-color:black;
+    --hover-color:blueviolet;
+    --table-color:#f3f3f3;
+    --trfr-left-from:0;
+    --trfr-left-to:2px;
+
+
+}
+
+*{box-sizing: inherit;}
+
+.icon{
+    font-size: 20px;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+/* body */
+
+.grid{
+    width: 100%;
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wide{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grow{
+    padding: 0 -12px;
+}
+
+.grid_column2{
+    padding: 0 5px;
+    width: 16.666667%;
+}
+
+.grid_column10{
+    padding: 0 5px;
+    width: calc(100% - 16.666667%);
+    
+  
+}
+.gird__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid_20{
+    /* padding: 0 5px; */
+    width: 20%;
+    height: 350px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    margin: 5px;
+}
+/* mobile */
+
+
+
+@media (max-width:1023px) and (min-width:740px){
+    .navbar_Notificatio{
+        
+        display: contents;
+        
+    }
+    .navbar_Notificatio-icon{
+        margin-right: 20px;
+    }
+    .navbar_cart{
+        margin-right: 8px;
+    }
+    .navbar_Notificatio-content{
+        right: 0;
+        top: 60px;
+    }
+    .navbar_Notificatio-content::before{
+        display: none;
+    }
+    .navbar_Notificatio-content::after{
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 14px 20px;
+        border-color: transparent transparent var(--table-color) transparent;
+        flex: 1;
+        top:-10px;
+        right: 44px;
+    }
+}
+
+
+@media (max-width:739px){
+    .header_menu{display: none;}
+
+    .header_navbar{
+        
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar_menu-mobile{
+        display: block;
+        margin-top: 28px;
+        margin-right: 10px;
+        font-size: 42px;
+        color: black;
+        
+    }
+
+   
+
+   
+
+
+    .nav__overlay{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0, 0, 0.3);
+        display: none;
+    }
+    
+    .header_menu-mobile{
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        max-width: 100%;
+        background-color: green;
+        text-align: right; 
+        transform: translateX(100%);
+        transition: transform linear 0.2s;
+    }
+    .mobile-menu{
+        font-size: 40px;
+        margin: 20px;
+        
+    }
+    .mobile-menu a{
+        text-decoration: none;
+    }
+    
+    .nav-input:checked ~ .nav__overlay{display: block;animation: fadeIn linear 0.2s;}
+    .nav-input:checked ~ .header_menu-mobile{transform: translateX(0);}
+}

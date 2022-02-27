@@ -145,7 +145,7 @@
         background-color: green;
         text-align: right; 
         transform: translateX(100%);
-        transition: transform linear 0.2s;
+        transition: transform linear 0.3s;
     }
     .mobile-menu{
         font-size: 40px;
